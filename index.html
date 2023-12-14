@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet</title>
+    <title>Local to You!</title>
     <style>
         #map {
-            height: 400px; /* Adjusted height */
+            height: 400px; 
             background-color: #ccc;
         }
     </style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
 </head>
 <body>
+    <section id="controls">
+        <label for="businessType">Select a business:</label>
     <select id="businessType">
         <option value="restaurant">Restaurant</option>
         <option value="cafe">Cafe</option>
         <option value="gym">Gym</option>
         <option value="hotel">Hotel</option>
     </select>
+</section>
+
     <button id="searchButton">Find Nearest</button>
     <div id="map"></div>
     <ul id="businessList"></ul>
